@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter-All",
+            "preLaunchTask": "Flutter-Launch-All",
+            "type": "dart",
+        },
+        {
+            "name": "Pixel 2 API 30",
+            "preLaunchTask": "Flutter-Launch-Android",
+            "type": "dart",
+        },
+        {
+            "name": "Chrome",
+            "preLaunchTask": "Flutter-Launch-Web",
+            "type": "dart",
+        }
+    ],
+}
