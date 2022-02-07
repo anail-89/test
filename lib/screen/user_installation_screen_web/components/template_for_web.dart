@@ -59,12 +59,12 @@ class TemplateForWeb extends StatelessWidget {
                       // margin: EdgeInsets.only(left: 32),
                       child: StepList(step: step),
                     ),
-                    SizedBox(
-                      height: size.height * 0.08,
-                    ),
+                    // SizedBox(
+                    //   height: size.height * 0.08,
+                    // ),
                     child,
                     SizedBox(
-                      height: size.height * 0.13,
+                      height: size.height * 0.08,
                     ),
                     Expanded(
                       child: Row(
