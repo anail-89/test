@@ -32,6 +32,7 @@ class StepCard extends StatelessWidget {
                 text,
                 style: TextStyle(
                   color: textColor,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ],

@@ -4,7 +4,7 @@ import 'package:test/components/header.dart';
 import 'package:test/components/second_step_button.dart';
 import 'package:test/components/step_list.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
-import 'package:intervalprogressbar/intervalprogressbar.dart';
+//import 'package:intervalprogressbar/intervalprogressbar.dart';
 //import 'package:intervalprogressbar/intervalprogressbar.dart';
 //import 'package:flutter_crm_test/components/steps.dart';
 
@@ -66,20 +66,21 @@ class _Body2State extends State<Body2> {
           SizedBox(
             width: size.width * 0.8,
             height: 20,
-            child: const IntervalProgressBar(
-                direction: IntervalProgressDirection.horizontal,
-                max: 20,
-                progress: 10,
-                intervalSize: 10,
-                size: Size(10, 10),
-                highlightColor: Color.fromRGBO(255, 125, 100, 1),
-                defaultColor: Colors.white,
-                intervalColor: Colors.white,
-                intervalHighlightColor: Colors.white,
-                reverse: false,
-                // intervalDegrees: 150,
-                // strokeWith: 50.0,
-                radius: 20),
+            child: Text('indicator'),
+            //  const IntervalProgressBar(
+            //     direction: IntervalProgressDirection.horizontal,
+            //     max: 20,
+            //     progress: 10,
+            //     intervalSize: 10,
+            //     size: Size(10, 10),
+            //     highlightColor: Color.fromRGBO(255, 125, 100, 1),
+            //     defaultColor: Colors.white,
+            //     intervalColor: Colors.white,
+            //     intervalHighlightColor: Colors.white,
+            //     reverse: false,
+            //     // intervalDegrees: 150,
+            //     // strokeWith: 50.0,
+            //     radius: 20),
           ),
           Container(
             // width: size.width * 0.75,

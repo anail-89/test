@@ -57,7 +57,7 @@ class StepList extends StatelessWidget {
             top: 95,
             child: StepCard(
               text: 'Personal Information',
-              icon: step == 3
+              icon: step <= 3
                   ? Icons.radio_button_unchecked
                   : Icons.radio_button_checked,
               textColor:
@@ -75,7 +75,7 @@ class StepList extends StatelessWidget {
             top: 150,
             child: StepCard(
               text: 'Password Setup',
-              icon: step == 4
+              icon: step <= 4
                   ? Icons.radio_button_unchecked
                   : Icons.radio_button_checked,
               textColor:

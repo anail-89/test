@@ -3,16 +3,16 @@ import 'package:test/components/second_step_button.dart';
 
 import 'components/template_for_web.dart';
 
-class UserInstalaltionScreen3Web extends StatefulWidget {
-  const UserInstalaltionScreen3Web({Key? key}) : super(key: key);
+class UserInstalaltionScreen4Web extends StatefulWidget {
+  const UserInstalaltionScreen4Web({Key? key}) : super(key: key);
 
   @override
-  _UserInstalaltionScreen3WebState createState() =>
-      _UserInstalaltionScreen3WebState();
+  _UserInstalaltionScreen4WebState createState() =>
+      _UserInstalaltionScreen4WebState();
 }
 
-class _UserInstalaltionScreen3WebState
-    extends State<UserInstalaltionScreen3Web> {
+class _UserInstalaltionScreen4WebState
+    extends State<UserInstalaltionScreen4Web> {
   final _formKey = GlobalKey<FormState>();
 
   void _submit() {
@@ -20,13 +20,14 @@ class _UserInstalaltionScreen3WebState
     if (!isValid) {
       return;
     }
-    Navigator.of(context).pushNamed('/password-setup');
+    Navigator.of(context).pushNamed('/installation-done');
     _formKey.currentState!.save();
   }
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var passVal;
     return TemplateForWeb(
       child: SizedBox(
         width: size.width * 0.7,
@@ -51,8 +52,9 @@ class _UserInstalaltionScreen3WebState
                     width: size.width * 0.3,
                     height: size.height * 0.1,
                     child: TextFormField(
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
-                        hintText: 'First name',
+                        hintText: 'Password',
                         errorBorder: InputBorder.none,
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
@@ -78,8 +80,10 @@ class _UserInstalaltionScreen3WebState
                       //onFieldSubmitted: (value) {},
                       // obscureText: true,
                       validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Can\'t be empty!';
+                        passVal = value;
+                        if (value!.isEmpty ||
+                            !RegExp(r"^[a-zA-Z0-9]{4,32}$").hasMatch(value)) {
+                          return 'Enter a valid password!';
                         }
                         return null;
                       },
@@ -92,8 +96,9 @@ class _UserInstalaltionScreen3WebState
                     width: size.width * 0.3,
                     height: size.height * 0.1,
                     child: TextFormField(
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
-                        hintText: 'Last name',
+                        hintText: 'Confirm Password',
                         errorBorder: InputBorder.none,
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
@@ -119,81 +124,27 @@ class _UserInstalaltionScreen3WebState
                       //onFieldSubmitted: (value) {},
                       // obscureText: true,
                       validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Can\'t be empty!';
+                        // if (value!.isEmpty ||
+                        //     !RegExp(r"^[a-zA-Z0-9]{4,32}$").hasMatch(value)) {
+                        //   return 'Enter a valid password!';
+                        // }
+                        if (passVal.length > 0 && passVal == value) {
+                          return null;
+                        } else {
+                          return 'Enter a valid password!';
                         }
-                        return null;
                       },
                     ),
                   ),
-
-                  // SizedBox(
-                  //   width: size.width * 0.3,
-                  //   //             height: size.height * 0.07,
-                  //   child: TextFormField(
-                  //     decoration: InputDecoration(labelText: 'E-Mail'),
-                  //     keyboardType: TextInputType.emailAddress,
-                  //     onFieldSubmitted: (value) {
-                  //       //Validator
-                  //     },
-                  //     validator: (value) {
-                  //       if (value!.isEmpty ||
-                  //           !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                  //               .hasMatch(value)) {
-                  //         return 'Enter a valid email!';
-                  //       }
-                  //       return null;
-                  //     },
-                  //   ),
-                  // ),
                 ],
               ),
               const SizedBox(
                 height: 15,
               ),
+
               SizedBox(
-                width: size.width * 0.3,
-                height: size.height * 0.1,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    errorBorder: InputBorder.none,
-                    focusedErrorBorder: InputBorder.none,
-                    filled: true,
-                    fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
-                    contentPadding: const EdgeInsets.only(
-                        top: 5.0, bottom: 5.0, left: 12.0),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                  // keyboardType: TextInputType.text,
-                  style: const TextStyle(
-                    color: Color.fromRGBO(10, 25, 49, 0.5),
-                    height: 1.6,
-                    fontSize: 12,
-                  ),
-                  // maxLines: 1,
-                  // onFieldSubmitted: (value) {},
-                  // obscureText: true,
-                  validator: (value) {
-                    if (value!.isEmpty ||
-                        !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                            .hasMatch(value)) {
-                      return 'Enter a valid email!';
-                    }
-                    return null;
-                  },
-                ),
+                height: 70,
               ),
-              // SizedBox(
-              //   height: 30,
-              // ),
               SizedBox(
                 height: 100,
                 width: size.width * 0.7,
@@ -210,7 +161,7 @@ class _UserInstalaltionScreen3WebState
                       top: 0,
                       left: 0,
                       paddingHorizontal: 16,
-                      routeName: '/user-installation',
+                      routeName: '/personal-information',
                       width: 74,
                       height: 36,
                     ),
@@ -218,6 +169,7 @@ class _UserInstalaltionScreen3WebState
                       checked: true,
                       text: 'CANCEL',
                       textColor: const Color.fromRGBO(30, 80, 170, 1),
+                      //routeName: '/user-installation',
                       buttonBackgroundColor: Colors.white,
                       right: 0,
                       top: 0,
@@ -281,28 +233,11 @@ class _UserInstalaltionScreen3WebState
               //     return null;
               //   },
               // ),
-              // SizedBox(
-              //   height: MediaQuery.of(context).size.width * 0.1,
-              // ),
-
-              // RaisedButton(
-              //   padding: EdgeInsets.symmetric(
-              //     vertical: 10.0,
-              //     horizontal: 15.0,
-              //   ),
-              //   child: Text(
-              //     "Submit",
-              //     style: TextStyle(
-              //       fontSize: 24.0,
-              //     ),
-              //   ),
-              //   onPressed: () => _submit(),
-              // )
             ],
           ),
         ),
       ),
-      step: 3,
+      step: 4,
     );
   }
 }

@@ -38,7 +38,7 @@ class _WebBody1State extends State<WebBody1> {
               Expanded(
                 flex: 6,
                 child: Container(
-                  width: size.width * 0.9,
+                  width: size.width * 0.7,
                   height: size.height,
                   padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
                   color: Color.fromRGBO(250, 250, 250, 1),
@@ -79,22 +79,26 @@ class _WebBody1State extends State<WebBody1> {
                           //  ),
                         ),
                       ),
-                      Expanded(
-                        // height: 80,
-                        // alignment: Alignment.topLeft,
-                        //  margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
+
+                      SizedBox(
+                        height: 80,
+                        width: size.width * 0.7,
+                        // margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
                         child: Container(
-                          margin: EdgeInsets.only(top: 16),
-                          width: size.width * 0.8,
+                          padding: const EdgeInsets.only(left: 0),
+                          margin: const EdgeInsets.only(top: 16, left: 0),
+                          alignment: Alignment.topLeft,
+                          //width: size.width * 0.8,
                           height: size.height * 0.15,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            //crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               //  ClipRRect(
                               // borderRadius: BorderRadius.circular(29),
                               Transform.scale(
-                                scale: 0.7,
+                                alignment: Alignment.centerLeft,
+                                scale: 0.8,
                                 child: Checkbox(
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
@@ -113,8 +117,8 @@ class _WebBody1State extends State<WebBody1> {
                                 style: TextStyle(
                                   color: Color.fromRGBO(30, 80, 170, 1),
                                   fontSize: 12,
-                                  height: 2,
-                                  fontWeight: FontWeight.normal,
+                                  height: 1.6,
+                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                               // const SizedBox(width: 20.0),
@@ -145,7 +149,7 @@ class _WebBody1State extends State<WebBody1> {
                                 routeName: '/user-installation',
                                 buttonBackgroundColor:
                                     const Color.fromRGBO(255, 125, 100, 1),
-                                paddingHorizontal: 15,
+                                paddingHorizontal: 12,
                                 textFontSize: 12,
                               ),
                             ],

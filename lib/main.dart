@@ -3,10 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:test/responsive.dart';
 import 'package:test/screen/user_installation_screen3.dart';
+import 'package:test/screen/user_installation_screen4.dart';
+import 'package:test/screen/user_installation_screen_5.dart';
 import 'package:test/screen/user_installation_screen_mobile/user_installation_screen1.dart';
 import 'package:test/screen/user_installation_screen_mobile/user_installation_screen2.dart';
 
 import 'package:test/screen/user_installation_screen_web/screen1.dart';
+import 'package:test/screen/user_installation_screen_web/screen4.dart';
 import 'constants.dart';
 
 void main() => runApp(const MyApp());
@@ -58,6 +61,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/user-installation': (ctx) => UserInstallationScreen2(),
         '/personal-information': (ctx) => UserInstallationScreen3(),
+        '/password-setup': (ctx) => UserInstallationScreen4(),
+        '/installation-done': (ctx) => UserInstallationScreen5(),
       },
     );
   }
