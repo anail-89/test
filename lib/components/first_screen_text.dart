@@ -15,12 +15,12 @@ class FirstScteenText extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold)),
             TextSpan(
                 text:
-                    "file will be\n automatically moved to trash.\nFollow to the steps."),
+                    "file will be automatically moved to trash.\nFollow to the steps."),
           ]),
       style: TextStyle(
         color: Color.fromRGBO(10, 25, 49, 1),
         fontSize: 12,
-        height: 2,
+        height: 1.8,
       ),
     );
   }

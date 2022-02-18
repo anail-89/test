@@ -14,7 +14,7 @@ class StepList extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.35,
+      height: size.height * 0.25,
       width: double.infinity,
       // alignment: Alignment.topLeft,
       child: Stack(
@@ -51,7 +51,7 @@ class StepList extends StatelessWidget {
             width: 3,
             child: DashLine(),
             left: 10,
-            top: 60,
+            top: 62,
           ),
           Positioned(
             top: 95,

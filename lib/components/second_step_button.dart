@@ -8,7 +8,7 @@ class SecondStepButton extends StatefulWidget {
   final bool checked;
   final double width;
   final double height;
-
+  final double bottom;
   final double right, top, left;
   final double paddingHorizontal;
   final double textFontSize;
@@ -22,6 +22,7 @@ class SecondStepButton extends StatefulWidget {
       this.right = 28,
       this.top = 60,
       this.left = 0,
+      this.bottom = 0,
       this.paddingHorizontal = 15,
       this.textFontSize = 16,
       this.width = 62,
@@ -38,7 +39,8 @@ class _SecondStepButtonState extends State<SecondStepButton> {
     return Container(
       width: widget.width,
       height: widget.height,
-      margin: EdgeInsets.fromLTRB(widget.left, widget.top, widget.right, 0),
+      margin: EdgeInsets.fromLTRB(
+          widget.left, widget.top, widget.right, widget.bottom),
       // child: Align(
       //   alignment: Alignment.topLeft,
       // margin: EdgeInsets.only(right: 0),

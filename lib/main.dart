@@ -11,6 +11,7 @@ import 'package:test/screen/user_installation_screen_mobile/user_installation_sc
 import 'package:test/screen/user_installation_screen_web/screen1.dart';
 import 'package:test/screen/user_installation_screen_web/screen4.dart';
 import 'constants.dart';
+import 'screen/user_installation_screen_desktop/screen1.dart';
 
 void main() => runApp(const MyApp());
 
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         body: Responsive(
           mobile: UserInstallationScreenMobile1(),
           tablet: UserInstallationScreen1Web(),
-          desktop: UserInstallationScreen1Web(),
+          desktop: UserInstallationScreen1Desktop(),
         ),
         //  LayoutBuilder(
         //   builder: (context, constraints) {

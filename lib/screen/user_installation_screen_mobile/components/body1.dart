@@ -25,23 +25,26 @@ class _Body1State extends State<Body1> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
-            height: size.height * 0.13,
+            height: size.height * 0.2,
           ),
           const header(),
-          SizedBox(
-            height: size.height * 0.04,
-          ),
-          Container(
+          // SizedBox(
+          //   height: size.height * 0.009,
+          // ),
+
+          Expanded(
             //alignment: Alignment.topLeft,
-            margin: const EdgeInsets.fromLTRB(32, 25, 16, 0),
-            child: SizedBox(
+
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(32, 25, 16, 0),
               width: MediaQuery.of(context).size.width,
+              // height: size.height * 0.9,
               child: FirstScteenText(),
-              //  ),
             ),
           ),
+          //),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
+            height: MediaQuery.of(context).size.height * 0.01,
           ),
           Container(
             // alignment: Alignment.topLeft,
@@ -80,23 +83,36 @@ class _Body1State extends State<Body1> {
               ],
             ),
           ),
-          SizedBox(
-            // height: size.height * 0.01,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SecondStepButton(
-                  checked: checked,
-                  text: 'SETUP',
-                  textColor: Color.fromRGBO(255, 255, 255, 1),
-                  routeName: '/user-installation',
-                  buttonBackgroundColor: Color.fromRGBO(255, 125, 100, 1),
-                  paddingHorizontal: 10,
-                  textFontSize: 12,
-                ),
-              ],
-            ),
+          // Expanded(
+          // height: size.height * 0.02,
+
+          // child: Container(
+          // height: 100,
+          // width: size.width * 0.9,
+          // child:
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SecondStepButton(
+                checked: checked,
+                text: 'SETUP',
+                textColor: Color.fromRGBO(255, 255, 255, 1),
+                routeName: '/user-installation',
+                buttonBackgroundColor: Color.fromRGBO(255, 125, 100, 1),
+                paddingHorizontal: 12,
+                textFontSize: 12,
+                bottom: 24,
+                width: 70,
+                height: 40,
+              ),
+            ],
           ),
+          // ),
+          //),
+          // SizedBox(
+          //   height: 24,
+          // ),
         ],
       ),
       // ),

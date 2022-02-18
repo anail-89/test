@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test/screen/user_installation_screen_desktop/screen2.dart';
 import 'package:test/screen/user_installation_screen_mobile/components/body2.dart';
 import 'package:test/screen/user_installation_screen_web/screen2.dart';
 
@@ -15,7 +16,7 @@ class UserInstallationScreen2 extends StatelessWidget {
         mobile: Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            toolbarHeight: 65,
+            // toolbarHeight: 90,
             // title: Text('App Bar!'),
             flexibleSpace: const Image(
               image: AssetImage('assets/images/appbar.png'),
@@ -24,10 +25,14 @@ class UserInstallationScreen2 extends StatelessWidget {
             ),
             backgroundColor: Colors.transparent,
           ),
-          body: SingleChildScrollView(child: Body2()),
+          body: SafeArea(
+            child: LayoutBuilder(builder: (builder, constraints) {
+              return const SingleChildScrollView(child: Body2());
+            }),
+          ),
         ),
         tablet: UserInstallationScreen2Web(),
-        desktop: UserInstallationScreen2Web(),
+        desktop: UserInstallationScreen2Desktop(),
       ),
     );
   }

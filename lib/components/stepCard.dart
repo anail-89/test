@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class StepCard extends StatelessWidget {
@@ -15,6 +17,7 @@ class StepCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       borderOnForeground: false,
+      elevation: 0,
       // shadowColor: Colors.white,
       child: Row(
         children: [
