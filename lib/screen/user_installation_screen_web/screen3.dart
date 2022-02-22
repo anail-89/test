@@ -41,9 +41,9 @@ class _UserInstalaltionScreen3WebState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               //styling
-              // SizedBox(
-              //   height: MediaQuery.of(context).size.width * 0.1,
-              // ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -54,6 +54,9 @@ class _UserInstalaltionScreen3WebState
                       decoration: InputDecoration(
                         hintText: 'First name',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -95,6 +98,9 @@ class _UserInstalaltionScreen3WebState
                       decoration: InputDecoration(
                         hintText: 'Last name',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -148,7 +154,7 @@ class _UserInstalaltionScreen3WebState
                   // ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
               SizedBox(
@@ -158,6 +164,9 @@ class _UserInstalaltionScreen3WebState
                   decoration: InputDecoration(
                     hintText: 'Email',
                     errorBorder: InputBorder.none,
+                    errorStyle: TextStyle(
+                      color: Color.fromRGBO(255, 125, 100, 1),
+                    ),
                     focusedErrorBorder: InputBorder.none,
                     filled: true,
                     fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -191,9 +200,9 @@ class _UserInstalaltionScreen3WebState
                   },
                 ),
               ),
-              // SizedBox(
-              //   height: 30,
-              // ),
+              SizedBox(
+                height: size.height * 0.05,
+              ),
               SizedBox(
                 height: 100,
                 width: size.width * 0.7,

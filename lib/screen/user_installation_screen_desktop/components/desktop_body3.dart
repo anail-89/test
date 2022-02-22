@@ -55,11 +55,14 @@ class _DesktopBody3State extends State<DesktopBody3> {
                 children: [
                   SizedBox(
                     width: size.width * 0.14,
-                    height: size.height * 0.08,
+                    height: size.height * 0.06,
                     child: TextFormField(
                       decoration: InputDecoration(
                         hintText: 'First name',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -96,11 +99,14 @@ class _DesktopBody3State extends State<DesktopBody3> {
                   ),
                   SizedBox(
                     width: size.width * 0.14,
-                    height: size.height * 0.08,
+                    height: size.height * 0.06,
                     child: TextFormField(
                       decoration: InputDecoration(
                         hintText: 'Last name',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -155,15 +161,18 @@ class _DesktopBody3State extends State<DesktopBody3> {
                 ],
               ),
               const SizedBox(
-                height: 15,
+                height: 10,
               ),
               SizedBox(
                 width: size.width * 0.14,
-                height: size.height * 0.08,
+                height: size.height * 0.06,
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Email',
                     errorBorder: InputBorder.none,
+                    errorStyle: TextStyle(
+                      color: Color.fromRGBO(255, 125, 100, 1),
+                    ),
                     focusedErrorBorder: InputBorder.none,
                     filled: true,
                     fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -197,14 +206,14 @@ class _DesktopBody3State extends State<DesktopBody3> {
                   },
                 ),
               ),
-              // SizedBox(
-              //   height: 30,
-              // ),
               SizedBox(
+                height: 30,
+              ),
+              Container(
                 height: 50,
                 width: size.width * 0.3,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     const SecondStepButton(
@@ -227,7 +236,7 @@ class _DesktopBody3State extends State<DesktopBody3> {
                       buttonBackgroundColor: Colors.white,
                       right: 0,
                       top: 0,
-                      left: 70,
+                      left: 270,
                       paddingHorizontal: 16,
                       //  left: size.width * 0.,
                       routeName: '/',

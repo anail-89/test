@@ -52,7 +52,7 @@ class _DesktopBody2State extends State<DesktopBody2> {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 80,
           ),
           SizedBox(
             height: 50,

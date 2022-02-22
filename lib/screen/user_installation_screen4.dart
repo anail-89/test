@@ -3,6 +3,7 @@ import 'package:test/responsive.dart';
 import 'package:test/screen/user_installation_screen_web/screen3.dart';
 import 'package:test/screen/user_installation_screen_web/screen4.dart';
 
+import 'user_installation_screen_desktop/screen4.dart';
 import 'user_installation_screen_mobile/screen4.dart';
 
 class UserInstallationScreen4 extends StatelessWidget {
@@ -27,7 +28,7 @@ class UserInstallationScreen4 extends StatelessWidget {
       body: Responsive(
         mobile: UserInstalaltionScreen4Mobile(),
         tablet: UserInstalaltionScreen4Web(),
-        desktop: UserInstalaltionScreen4Web(),
+        desktop: UserInstallationScreen4Desktop(),
       ),
     );
   }

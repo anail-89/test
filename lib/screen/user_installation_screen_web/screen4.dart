@@ -42,9 +42,9 @@ class _UserInstalaltionScreen4WebState
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               //styling
-              // SizedBox(
-              //   height: MediaQuery.of(context).size.width * 0.1,
-              // ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -56,6 +56,9 @@ class _UserInstalaltionScreen4WebState
                       decoration: InputDecoration(
                         hintText: 'Password',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -100,6 +103,9 @@ class _UserInstalaltionScreen4WebState
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -138,12 +144,9 @@ class _UserInstalaltionScreen4WebState
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 15,
-              ),
 
               SizedBox(
-                height: 70,
+                height: size.height * 0.15,
               ),
               SizedBox(
                 height: 100,

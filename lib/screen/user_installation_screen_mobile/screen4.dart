@@ -56,6 +56,9 @@ class _UserInstalaltionScreen4MobileState
                       decoration: InputDecoration(
                         hintText: 'Password',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),
@@ -103,6 +106,9 @@ class _UserInstalaltionScreen4MobileState
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
                         errorBorder: InputBorder.none,
+                        errorStyle: TextStyle(
+                          color: Color.fromRGBO(255, 125, 100, 1),
+                        ),
                         focusedErrorBorder: InputBorder.none,
                         filled: true,
                         fillColor: const Color.fromRGBO(10, 25, 49, 0.05),

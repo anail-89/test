@@ -37,11 +37,12 @@ class TemplateForDesktop extends StatelessWidget {
                           // left: 32,
                           top: 42,
                         ),
-                        height: 50,
+                        height: size.height * 0.1,
                         width: size.width * 0.1,
                         child: Image.asset(
                           "assets/images/logo.png",
                           width: size.width * 0.1,
+                          height: size.height * 0.1,
                         ),
                       ),
                     ],
@@ -51,13 +52,14 @@ class TemplateForDesktop extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: size.width * 0.1),
+                      //SizedBox(width: size.width * 0.1),
                       Container(
-                        width: size.width * 0.1,
-                        height: size.height * 0.3,
+                        width: size.width * 0.2,
+                        height: size.height * 0.2,
                         child: Image.asset(
                           "assets/images/plant1.png",
-                          width: size.width * 0.1,
+                          width: size.width * 0.2,
+                          height: size.height * 0.3,
                         ),
                       ),
                       // SizedBox(width: size.width * 0.1),
@@ -70,9 +72,9 @@ class TemplateForDesktop extends StatelessWidget {
               flex: 6,
               child: Container(
                 margin: EdgeInsets.only(
-                    top: size.height * 0.15, right: size.width * 0.1),
+                    top: size.height * 0.23, right: size.width * 0.15),
                 width: size.width * 0.3,
-                height: size.height * 0.8,
+                height: size.height * 0.64,
                 //width: size.width * 0.7,
 
                 padding: EdgeInsets.fromLTRB(100, 80, 100, 0),

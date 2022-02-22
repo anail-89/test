@@ -40,11 +40,12 @@ class _DesktopBody1State extends State<DesktopBody1> {
                           // left: 32,
                           top: 42,
                         ),
-                        height: 50,
+                        height: 100,
                         width: size.width * 0.1,
                         child: Image.asset(
                           "assets/images/logo.png",
                           width: size.width * 0.1,
+                          height: 100,
                         ),
                       ),
                     ],
@@ -75,7 +76,7 @@ class _DesktopBody1State extends State<DesktopBody1> {
                 margin: EdgeInsets.only(
                     top: size.height * 0.23, right: size.width * 0.15),
                 width: size.width * 0.3,
-                height: size.height * 0.6,
+                height: size.height * 0.57,
                 //width: size.width * 0.7,
 
                 padding: EdgeInsets.fromLTRB(100, 80, 100, 0),
@@ -141,7 +142,7 @@ class _DesktopBody1State extends State<DesktopBody1> {
                       child: Container(
                         width: size.width,
                         height: size.height * 0.1,
-                        margin: const EdgeInsets.only(bottom: 30),
+                        margin: const EdgeInsets.only(bottom: 90),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,

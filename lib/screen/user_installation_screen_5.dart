@@ -3,6 +3,8 @@ import 'package:test/responsive.dart';
 import 'package:test/screen/user_installation_screen_mobile/screen5.dart';
 import 'package:test/screen/user_installation_screen_web/screen5.dart';
 
+import 'user_installation_screen_desktop/screen5.dart';
+
 class UserInstallationScreen5 extends StatelessWidget {
   const UserInstallationScreen5({Key? key}) : super(key: key);
 
@@ -25,7 +27,7 @@ class UserInstallationScreen5 extends StatelessWidget {
       body: Responsive(
         mobile: UserInstallationScreen5Mobile(),
         tablet: UserInstallationScreen5Web(),
-        desktop: UserInstallationScreen5Web(),
+        desktop: UserInstallationScreen5Desktop(),
       ),
     );
   }

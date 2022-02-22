@@ -53,7 +53,7 @@ class _UserInstallationScreen2WebState
             ),
             const SizedBox(height: 25, width: 0.7),
             SizedBox(
-              height: size.height * 0.08,
+              height: size.height * 0.25,
             ),
             SizedBox(
               height: 100,
